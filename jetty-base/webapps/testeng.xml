@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+	<Set name="contextPath">/testeng</Set>
+	<Set name="war"><SystemProperty name="jetty.base" default="."/>/testeng.war</Set>
+
+	<New id="recordDS" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg></Arg>
+		<Arg>jdbc/recordDS</Arg>
+		<Arg>
+			<New class="org.postgresql.ds.PGSimpleDataSource">
+				<Set name="User">testeng</Set>
+				<Set name="Password">testeng</Set>
+				<Set name="DatabaseName">records</Set>
+				<Set name="ServerName">chainz-config-db-rct2.postgres.database.azure.com</Set>
+				<Set name="PortNumber">5432</Set>
+			</New>
+		</Arg>
+	</New>
+
+</Configure>
