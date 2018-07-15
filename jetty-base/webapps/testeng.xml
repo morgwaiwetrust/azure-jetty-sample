@@ -8,14 +8,17 @@
 		<Arg></Arg>
 		<Arg>jdbc/recordDS</Arg>
 		<Arg>
-			<New class="org.postgresql.ds.PGSimpleDataSource">
-				<Set name="User">testeng@chainz-config-data-rct3</Set>
+			<New class="org.postgresql.ds.PGPoolingDataSource">
+				<Set name="User">testeng@chainz-config-data-rct3.postgres.database.azure.com</Set>
 				<Set name="Password">testeng</Set>
 				<Set name="DatabaseName">records</Set>
 				<Set name="ServerName">chainz-config-data-rct3.postgres.database.azure.com</Set>
 				<Set name="PortNumber">5432</Set>
 				<Set name="SslMode">verify-ca</Set>
 				<Set name="SslRootCert">d:\home\site\wwwroot\jetty-base\root.crt</Set>
+				<Set name="DataSourceName">recordDS</Set>
+				<Set name="InitialConnections">1</Set>
+				<Set name="MaxConnections">3</Set>
 			</New>
 		</Arg>
 	</New>
