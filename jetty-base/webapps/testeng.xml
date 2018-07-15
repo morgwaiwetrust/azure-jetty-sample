@@ -9,13 +9,18 @@
 		<Arg>jdbc/recordDS</Arg>
 		<Arg>
 			<New class="org.postgresql.ds.PGSimpleDataSource">
-				<Set name="User">testeng</Set>
+				<Set name="User">testeng@chainz-config-data-rct3</Set>
 				<Set name="Password">testeng</Set>
 				<Set name="DatabaseName">records</Set>
-				<Set name="ServerName">chainz-config-db-rct2.postgres.database.azure.com</Set>
+				<Set name="ServerName">chainz-config-data-rct3.postgres.database.azure.com</Set>
 				<Set name="PortNumber">5432</Set>
 			</New>
 		</Arg>
 	</New>
+
+	<Call name="setAttribute">
+		<Arg>org.eclipse.jetty.server.webapp.WebInfIncludeJarPattern</Arg>
+		<Arg>nothing$</Arg>
+	</Call>
 
 </Configure>
