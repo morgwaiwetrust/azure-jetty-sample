@@ -15,7 +15,7 @@
 				<Set name="ServerName">chainz-config-data-rct3.postgres.database.azure.com</Set>
 				<Set name="PortNumber">5432</Set>
 				<Set name="SslMode">verify-ca</Set>
-				<Set name="SslRootCert">root.crt</Set>
+				<Set name="SslRootCert">d:\home\site\wwwroot\jetty-base\root.crt</Set>
 			</New>
 		</Arg>
 	</New>
